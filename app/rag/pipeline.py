@@ -14,7 +14,7 @@ from llama_index.core import (
     Settings,
     Document
 )
-from llama_index.core.chat_engine import CondenseChatEngine
+from llama_index.core.chat_engine import CondenseQuestionChatEngine
 from llama_index.core.chat_engine.types import StreamingAgentChatResponse
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding

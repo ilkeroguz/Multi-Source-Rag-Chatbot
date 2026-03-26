@@ -11,7 +11,7 @@ import tempfile
 
 from llama_index.core import Document, SimpleDirectoryReader
 from llama_index.core.node_parser import SentenceSplitter
-from llama_index.readers.file import PDFReader, CSVReader
+from llama_index.readers.file import PDFReader; from llama_index.core.readers import SimpleDirectoryReader
 import httpx
 from bs4 import BeautifulSoup
 
@@ -159,7 +159,7 @@ class DocumentLoader:
             logger.info(f"Loading CSV from {file_path}")
 
             # Load CSV using LlamaIndex CSVReader
-            reader = CSVReader()
+            reader = SimpleDirectoryReader(input_files=[file_path])
             documents = reader.load_data(file=Path(file_path))
 
             # Add metadata
