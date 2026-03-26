@@ -1,4 +1,4 @@
-# 🤖 Multi-Source RAG Chatbot
+# Multi-Source RAG Chatbot
 
 An intelligent chatbot powered by Retrieval-Augmented Generation (RAG) that can ingest and query knowledge from multiple sources including PDFs, web URLs, and CSV files. Built with LlamaIndex, ChromaDB, and OpenAI GPT-4.
 
@@ -8,18 +8,18 @@ An intelligent chatbot powered by Retrieval-Augmented Generation (RAG) that can 
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-0.4.22-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## ✨ Features
+## Features
 
-- 📄 **Multi-Source Ingestion**: Upload PDFs, CSV files, or ingest web content from URLs
-- 🧠 **RAG-Powered Responses**: Retrieve relevant context from your documents and generate accurate answers
-- 💬 **Conversation Memory**: Session-based chat history (stores last 10 messages)
-- 🔍 **Source Citations**: Every answer shows which documents it came from
-- 🌊 **Streaming Support**: Real-time response streaming for better UX
-- 🎨 **Modern UI**: Dark-themed, responsive chat interface
-- 🐳 **Fully Dockerized**: Easy deployment with docker-compose
-- 🚀 **Production Ready**: Async/await, error handling, health checks
+-  **Multi-Source Ingestion**: Upload PDFs, CSV files, or ingest web content from URLs
+-  **RAG-Powered Responses**: Retrieve relevant context from your documents and generate accurate answers
+-  **Conversation Memory**: Session-based chat history (stores last 10 messages)
+-  **Source Citations**: Every answer shows which documents it came from
+-  **Streaming Support**: Real-time response streaming for better UX
+-  **Modern UI**: Dark-themed, responsive chat interface
+-  **Fully Dockerized**: Easy deployment with docker-compose
+-  **Production Ready**: Async/await, error handling, health checks
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
@@ -40,7 +40,7 @@ An intelligent chatbot powered by Retrieval-Augmented Generation (RAG) that can 
                                           └─────────────┘
 ```
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: Python 3.11, FastAPI, Uvicorn
 - **RAG Framework**: LlamaIndex
@@ -50,13 +50,13 @@ An intelligent chatbot powered by Retrieval-Augmented Generation (RAG) that can 
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
 - **Containerization**: Docker, docker-compose
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Docker and docker-compose (recommended)
 - OR Python 3.11+ (for local development)
 - OpenAI API key
 
-## 🚀 Quick Start with Docker (Recommended)
+##  Quick Start with Docker (Recommended)
 
 ### 1. Clone the Repository
 
@@ -93,7 +93,7 @@ That's it! The application is now running with:
 - API documentation at `http://localhost:8080/docs`
 - ChromaDB at `http://localhost:8000`
 
-## 💻 Local Development Setup
+##  Local Development Setup
 
 ### 1. Create Virtual Environment
 
@@ -148,7 +148,7 @@ Or with uvicorn:
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8080
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 multi-source-rag-chatbot/
@@ -178,7 +178,7 @@ multi-source-rag-chatbot/
 └── README.md
 ```
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Document Upload
 
@@ -260,7 +260,7 @@ Edit the `.env` file to customize:
 | `CHROMA_HOST` | ChromaDB host | chromadb |
 | `CHROMA_PORT` | ChromaDB port | 8000 |
 
-## 🎯 Features in Detail
+##  Features in Detail
 
 ### Multi-Source Document Ingestion
 
@@ -291,7 +291,7 @@ Every response includes:
 - Metadata about the source document
 - Similarity scores (relevance)
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### ChromaDB Connection Issues
 
@@ -325,14 +325,14 @@ If you get connection errors to ChromaDB:
 - Verify file format is supported
 - Check application logs: `docker-compose logs app`
 
-## 📊 Performance Tips
+##  Performance Tips
 
 1. **Adjust Chunk Size**: Smaller chunks (256-512) for more precise retrieval, larger (1024+) for more context
 2. **Top-K Retrieval**: Increase for more context, decrease for faster responses
 3. **Model Selection**: Use GPT-3.5-turbo for faster/cheaper responses, GPT-4 for better quality
 4. **Embedding Caching**: ChromaDB caches embeddings, so repeated queries are fast
 
-## 🛡️ Security Considerations
+##  Security Considerations
 
 - Store `.env` file securely and never commit it to version control
 - Use environment variables for sensitive data
@@ -341,38 +341,17 @@ If you get connection errors to ChromaDB:
 - Use HTTPS in production
 - Regularly update dependencies
 
-## 📝 TODO / Future Enhancements
-
-- [ ] Add authentication and user management
-- [ ] Support for more document types (DOCX, TXT, Markdown)
-- [ ] Advanced filtering and metadata search
-- [ ] Multi-language support
-- [ ] Document management UI (delete, update)
-- [ ] Export conversation history
-- [ ] Custom prompt templates
-- [ ] Admin dashboard
-- [ ] Rate limiting
-- [ ] Cloud deployment guides (AWS, GCP, Azure)
-
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [LlamaIndex](https://www.llamaindex.ai/) for the amazing RAG framework
 - [ChromaDB](https://www.trychroma.com/) for the vector database
 - [OpenAI](https://openai.com/) for GPT-4 and embeddings
 - [FastAPI](https://fastapi.tiangolo.com/) for the excellent web framework
-
-## 📧 Support
-
-For issues, questions, or contributions, please open an issue on GitHub.
-
----
-
-**Built with ❤️ for the AI community**
